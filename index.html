@@ -112,30 +112,30 @@
         var seedAnimate = eval(Jscex.compile("async", function () {
             seed.draw();
             while (hold) {
-                $await(Jscex.Async.sleep(5));
+                $await(Jscex.Async.sleep(10));
             }
             while (seed.canScale()) {
                 seed.scale(0.95);
-                $await(Jscex.Async.sleep(5));
+                $await(Jscex.Async.sleep(10));
             }
             while (seed.canMove()) {
                 seed.move(0, 2);
                 foot.draw();
-                $await(Jscex.Async.sleep(5));
+                $await(Jscex.Async.sleep(10));
             }
         }));
 
         var growAnimate = eval(Jscex.compile("async", function () {
             do {
                 tree.grow();
-                $await(Jscex.Async.sleep(5));
+                $await(Jscex.Async.sleep(10));
             } while (tree.canGrow());
         }));
 
         var flowAnimate = eval(Jscex.compile("async", function () {
             do {
                 tree.flower(2);
-                $await(Jscex.Async.sleep(5));
+                $await(Jscex.Async.sleep(10));
             } while (tree.canFlower());
         }));
 
@@ -143,7 +143,7 @@
             tree.snapshot("p1", 240, 0, 610, 680);
             while (tree.move("p1", 500, 0)) {
                 foot.draw();
-                $await(Jscex.Async.sleep(5));
+                $await(Jscex.Async.sleep(10));
             }
             foot.draw();
             tree.snapshot("p2", 500, 0, 610, 680);
@@ -151,7 +151,7 @@
             // 会有闪烁不得意这样做, (＞﹏＜)
             canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
             canvas.css("background", "#ffe");
-            $await(Jscex.Async.sleep(150));
+            $await(Jscex.Async.sleep(300));
             canvas.css("background", "none");
         }));
 
@@ -161,7 +161,7 @@
                 tree.ctx.clearRect(0, 0, width, height);
                 tree.jump();
                 foot.draw();
-                $await(Jscex.Async.sleep(15));
+                $await(Jscex.Async.sleep(25));
             }
         }));
 
@@ -177,7 +177,7 @@
             $("#clock-box").fadeIn(500);
             while (true) {
                 timeElapse(together);
-                $await(Jscex.Async.sleep(500));
+                $await(Jscex.Async.sleep(1000));
             }
         }));
 
