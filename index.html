@@ -1,45 +1,50 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!-- saved from url=(0027)http://itzoo.info/love.html -->
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Love Fu</title>
-        
-        <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
-        <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
-        <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
-        <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
-        <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Love You</title>
 
-    </head>
-    <body>
-        <div id="main">
-            <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
-            <div id="wrap">
-               <div id="text">
-                    <div id="code">                 
-                    <span class="say">I ❤ you ~</span><br>
-                    
-                    <span class="say"><span class="space"></span> -- Yours, Mr.Starry.</span>
-                    </div>
-                </div>
-                <div id="clock-box">
-                    Mr.Starry 与 福阿萌 在一起的
-                        <div id="clock"></div>
-                </div>
-                <canvas id="canvas" width="1100" height="680"></canvas>
+    <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
+    <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
+
+</head>
+<body>
+<div id="main">
+    <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a
+            href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a
+            href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~
+    </div>
+    <div id="wrap">
+        <div id="text">
+            <div id="code">
+                <span class="say">I ❤ you ~</span><br>
+
+                <span class="say"><span class="space"></span> -- Yours, Mr.Starry.</span>
             </div>
-            <audio src="love.mp3" autoplay="autoplay"></audio>
         </div>
-    
-    <script>
-    </script>
+        <!--                <div id="clock-box">-->
+        <!--                    Mr.Starry 与 福阿萌 在一起的-->
+        <!--                        <div id="clock"></div>-->
+        <!--                </div>-->
+        <canvas id="canvas" width="1100" height="680"></canvas>
+    </div>
+    <audio src="love.mp3" autoplay="autoplay"></audio>
+</div>
 
-    <script>
-    (function(){
+<script>
+</script>
+
+<script>
+    (function () {
         var canvas = $('#canvas');
 
         if (!canvas[0].getContext) {
@@ -49,7 +54,7 @@
 
         var width = canvas.width();
         var height = canvas.height();
-        
+
         canvas.attr("width", width);
         canvas.attr("height", height);
 
@@ -75,7 +80,7 @@
                     [546, 357, 608, 252, 678, 221, 6, 100, [
                         [590, 293, 646, 277, 648, 271, 2, 80]
                     ]]
-                ]] 
+                ]]
             ],
             bloom: {
                 num: 700,
@@ -94,17 +99,17 @@
         var foot = tree.footer;
         var hold = 1;
 
-        canvas.click(function(e) {
+        canvas.click(function (e) {
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
             if (seed.hover(x, y)) {
-                hold = 0; 
+                hold = 0;
                 canvas.unbind("click");
                 canvas.unbind("mousemove");
                 canvas.removeClass('hand');
             }
-        }).mousemove(function(e){
+        }).mousemove(function (e) {
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
@@ -196,8 +201,7 @@
 
         runAsync().start();
     })();
-    </script>
+</script>
 
-
-
-</body></html>
+</body>
+</html>
